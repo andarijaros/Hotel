@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Haga su reserva</h1>
+    <form action="procesareserva.php" method="get">
+    <!--Nombre apellido y dni-->
+    <fieldset>
+        <legend>Datos Personales:</legend>
+    <p>
+        <label for="nom">Nombre:</label>
+        <input id="nom" name="nombre"
+               type="text" maxlength="100" 
+               autofocus>
+    </p>
+     <p>
+        <label for="ape">Apellido:</label>
+        <input id="ape" name="apellido" 
+               type="text" maxlength="100">
+    </p>
+    <p>
+        <label for="dni">DNI:</label>
+        <input id="dni" name="dni"
+               maxlength="10" placeholder="DNI con letra"
+               required>
+    </p>
+    </fieldset>
+    <!--Tipo habitacion y numero de personas-->
+    <fieldset>
+        <legend>Datos de su estancia</legend>
+    <p>
+        <label for="ind">Individual</label>
+        <input type="radio" id="ind"
+               name="Habitacion">
+    </p>
+    <p>
+        <label for="dob">Doble</label>
+        <input type="radio" id="dob"
+               name="Habitacion">
+    </p>
+    <p>
+        <label for="tri">Triple</label>
+        <input type="radio" id="tri"
+               name="Habitacion">
+    </p>
+    <p>
+        <label for="Npersonas">Numero de personas:</label>
+        <select name="Npersonas" id="Npersonas">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </p>
+    <p>
+        <label for="mascotas">LLevo mascotas</label>
+        <input  type="checkbox"
+                id="mascotas" name="mascotas">
+    </p>
+    <p>
+        <label for="date">Fecha de llegada</label>
+        <input type="date" id="date" name="date">
+    </p>
+    <p>
+        <label for="llegada">Hora de llegada:</label>
+        <input type="time" id="llegada" name="llegada">
+    </p>
+    </fieldset>
+    <!--Botones enviar y reiniciar-->
+    <p>
+        <input type="submit" value="Enviar datos">
+        <input type="reset" value="Reiniciar formulario">
+    </p>
+    <p>
+        <a href="index.html">Volver</a>
+    </p>
+
+
+
+    </form>
+</body>
+</html>
